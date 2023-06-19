@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+    <b style="background-color:blue ; color: whitesmoke;"> Exam Scores</b><br><br>
+    <input  type="number" oninput="manipulate()" id="score" style="border: none; background-color:aqua; border-radius: 15px;">
+    <p id="result"></p>
+    <script>
+        function manipulate(){
+        let score = document.getElementById('score').value;
+        if (score >= 70 && score <= 100){
+            document.getElementById('result').innerHTML= "Grade A: EXELLECT"
+        }else if(score > 70 && score <= 60){
+            document.getElementById('result').innerHTML= "Grade B: VERY GOOD"
+        }
+        else if(score > 50 && score <= 60){
+            document.getElementById('result').innerHTML= "Grade C: GOOD"
+        }
+        else if(score > 45 && score <= 50){
+            document.getElementById('result').innerHTML= "Grade D: POOR"
+        }
+        else if(score > 40 && score <= 45){
+            document.getElementById('result').innerHTML= "Grade E: VERY POOR"
+        }
+        else if(score >= 0 && score <= 40){
+            document.getElementById('result').innerHTML= "Grade F: FAILED"
+        }
+        else if(score > 100 ){
+          document.getElementById('result').innerHTML= "Grade Not Applicable"
+        }
+
+    }
+
+
+
+
+    </script>
+</body>
+</html>
